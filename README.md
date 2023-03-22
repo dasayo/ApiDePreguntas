@@ -30,3 +30,10 @@ Start the server
   npm run dev
 ```
 
+
+Luego de iniciar el servidor es necesario crear un usuario admin para poder
+crear las preguntas y respuestas, para esto se debe hacer una petición POST a la ruta
+http://localhost:4001/api/v1/user/api/v1/user/create pueden ver de forma mas detallada
+accediendo a la documentación de la api en http://localhost:4001/docs/index.html#/
+
+
