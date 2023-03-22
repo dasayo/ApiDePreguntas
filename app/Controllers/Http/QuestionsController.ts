@@ -23,7 +23,7 @@ export default class QuestionsController {
       return response.status(200).json({state: true ,message: 'Pregunta creada correctamente'})
     }
     catch(error){
-      return response.status(400).json({state: false ,error: 'Error al crear la pregunta'})
+      return response.status(400).json({state: false ,message: 'Error al crear la pregunta'})
     }
   }
 
@@ -32,7 +32,7 @@ export default class QuestionsController {
       let question = await Question.query().select('question', 'id').where('state', true)
       return response.status(200).json({state: true ,questions: question})
     }catch(error){
-      return response.status(400).json({state: false ,error: 'Error al listar las preguntas'})
+      return response.status(400).json({state: false ,message: 'Error al listar las preguntas'})
     }
 
   }
@@ -46,11 +46,11 @@ export default class QuestionsController {
       if(question){
         question.state = false
         await question.save()
-        return response.status(200).json({state: true ,message: 'Pregunta eliminada correctamente'})
+        return response.status(200).json({state: true ,message: 'Pregunta Eliminada con exito'})
       }
     }catch(error){
       console.log(error);
-      return response.status(400).json({state: false ,error: 'Error al eliminar la pregunta'})
+      return response.status(400).json({state: false ,message: 'Error al eliminar la pregunta'})
     }
   }
 
@@ -68,7 +68,7 @@ export default class QuestionsController {
     }
     catch(error){
       console.log(error);
-      return response.status(400).json({state: false ,errmessageor: 'Error al editar la pregunta'})
+      return response.status(400).json({state: false ,message: 'Error al editar la pregunta'})
     }
   }
 

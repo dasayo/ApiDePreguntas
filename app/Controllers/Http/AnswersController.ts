@@ -1,5 +1,6 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Answer from "App/Models/Answer"
+import Question from "App/Models/Question"
 export default class AnswersController {
 
   public async createAnswer(id: number, data: any){
@@ -18,6 +19,12 @@ export default class AnswersController {
         throw new Error('No se encontraron opciones')
       }
 
+      const question = await Question.find(params.id)
+
+      if (question?.state == false){
+        throw new Error('Pregunta inactiva')
+      }
+
       const options = answers.map((answer: any) => {
         return {
           id: answer.id,
@@ -25,9 +32,9 @@ export default class AnswersController {
         }
       })
 
-      return response.status(200).json({status: true ,message: 'Listado de opciones' ,options: options})
+      return response.status(200).json({state: true ,message: 'Listado de opciones' ,options: options})
     }catch(error){
-      return response.status(404).json({status: false ,message: 'Error al obtener el listado de opciones'})
+      return response.status(404).json({state: false ,message: 'Error al obtener el listado de opciones'})
     }
 
   }

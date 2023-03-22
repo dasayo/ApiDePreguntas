@@ -26,9 +26,9 @@ export default class Admin {
         throw new Error('No tiene permisos para realizar esta acción.')
       }
       await next()
+
     }
     catch(error){
-      console.log(error)
       return ctx.response.status(401).send({
         message: 'Token inválido',
         status: 401

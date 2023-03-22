@@ -10,7 +10,8 @@ export default class UsersController {
 
   public async registerUser({ request, response }: HttpContextContract) {
     const { firstName, secondName, surname, secondSurName, documentNumber, typeDocument, email, password, phone } = request.all()
-    let { role } = request.all()
+    let { rol } = request.all()
+    let role = rol
     const salt = await bcrypt.genSalt(10)
     const hashPassword = await bcrypt.hash(password, salt)
 
@@ -32,11 +33,11 @@ export default class UsersController {
         phone,
         state: true
       })
-      return response.status(201).json({state: user.$attributes.state, mensaje: 'Estudiante creado correctamente'})
+      return response.status(201).json({state: user.$attributes.state, message: 'Estudiante creado correctamente'})
     }
 
     catch(error){
-      return response.status(400).json({state: false ,mensaje: 'Fallo en la creación del estudiante'})
+      return response.status(400).json({state: false ,message: 'Fallo en la creación del estudiante'})
     }
 
   }
@@ -73,11 +74,11 @@ export default class UsersController {
         id: user.id,
         name: user.firstName+ ' ' + user.secondName + ' ' + user.surname + ' ' + user.secondSurName,
         role: await new  RolController().getRoleName(user.role),
-        mensaje: 'Ingreso exitoso', token})
+        message: 'Ingreso exitoso', token})
 
     }
     catch(error){
-      return response.status(400).json({state: false, mensaje: 'Error al loguear el usuario'})
+      return response.status(400).json({state: false, message: 'Error al loguear el usuario'})
     }
 
   }
@@ -136,19 +137,17 @@ export default class UsersController {
       return response.status(200).json({state: true, message: "Listado de estudiantes" , users})
     }
     catch(error){
-      console.log(error)
-      return response.status(400).json({state: false, mensaje: 'Fallo en el listado de estudiantes'})
+      return response.status(400).json({state: false, message: 'Fallo en el listado de estudiantes'})
     }
   }
 
   public async getUser({ response, params }: HttpContextContract) {
     const userExist = await User.findBy('id', params.id)
-
-    if(!userExist){
-      return response.status(400).json({state: false, mensaje: 'Error al consultar el detalle del usuario'})
-    }
-
     try{
+      if(!userExist){
+        throw new Error('Usuario no encontrado')
+      }
+
       const tmp = await User.query().
         select(
           'first_name',
@@ -175,11 +174,10 @@ export default class UsersController {
           }
         })
 
-      return response.status(200).json({user})
+      return response.status(200).json(user[0])
     }
     catch(error){
-      console.log(error)
-      return response.status(400).json({state: false, mensaje: 'Error al consultar el detalle del usuario'})
+      return response.status(400).json({state: false, message: 'Error al consultar el detalle del usuario'})
     }
   }
 

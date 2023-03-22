@@ -39,10 +39,10 @@ export default class FormsController {
         await form.save()
       }
 
-      return response.status(200).json({status: true ,message: 'Respuestas almacenadas con exito'})
+      return response.status(200).json({state: true ,message: 'Respuestas almacenadas con exito'})
     }
-    catch{
-      return response.status(400).json({status: false ,message: 'No se pudieron almacenar las respuestas'})
+    catch(error){
+      return response.status(400).json({state: false ,message: 'No se pudieron almacenar las respuestas'})
     }
   }
 

@@ -12,8 +12,8 @@ test.group('Users Methods', () => {
       secondSurName: "velez",
       typeDocument: 1,
       role: 2,
-      documentNumber: "1100000019",
-      email: "jderco1019@gmail.com",
+      documentNumber: "1100000021",
+      email: "jderco1021@gmail.com",
       phone: "3123212311",
       password: "1234567890",
       state: "true"
@@ -28,8 +28,8 @@ test.group('Users Methods', () => {
       surname: "Arco",
       secondSurName: "velez",
       typeDocument: 1,
-      documentNumber: "1110000019",
-      email: "jderco1119@gmail.com",
+      documentNumber: "1110000021",
+      email: "jderco1121@gmail.com",
       phone: "3123212311",
       password: "1234567890",
       state: "true"

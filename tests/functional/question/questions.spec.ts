@@ -31,6 +31,12 @@ test.group('Test od questions controller', () => {
     response.assertStatus(200)
   })
 
+  // test('get question inexistent', async ({ client }) => {
+  //   const token = await obtenerTokenAutorizacion()
+  //   const response = await client.get('/api/v1/questions/getQuestion/26').header('Authorization', `Bearer ${token}`)
+  //   response.assertStatus(400)
+  // })
+
   test('delete question', async ({ client }) => {
     const token = await obtenerTokenAutorizacion()
     const response = await client.delete('/api/v1/questions/deleteQuestion/26').header('Authorization', `Bearer ${token}`)
@@ -61,8 +67,14 @@ test.group('Test od questions controller', () => {
 
   test('get options', async ({ client }) => {
     const token = await obtenerTokenAutorizacion()
-    const response = await client.get('/api/v1/questions/getOptions/26').header('Authorization', `Bearer ${token}`)
+    const response = await client.get('/api/v1/questions/getOptions/27').header('Authorization', `Bearer ${token}`)
     response.assertStatus(200)
+  })
+
+  test('get options with inexistent question', async ({ client }) => {
+    const token = await obtenerTokenAutorizacion()
+    const response = await client.get('/api/v1/questions/getOptions/26').header('Authorization', `Bearer ${token}`)
+    response.assertStatus(404)
   })
 
   test('get options with invalid id', async ({ client }) => {
