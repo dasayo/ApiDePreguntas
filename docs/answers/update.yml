@@ -27,7 +27,7 @@
               $ref: '#/definitions/Answer'
             example:
               {
-                "status": true,
+                "state": true,
                 "message": "opcion Editada con exito"
               }
       404:
@@ -36,6 +36,6 @@
           application/json:
             example:
               {
-                "status": false,
+                "state": false,
                 "message": "Error al editar la opcion"
               }

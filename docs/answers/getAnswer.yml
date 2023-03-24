@@ -50,5 +50,5 @@
             example:
               {
                 "state": false,
-                "error": "Error al obtener las respuestas"
+                "message": "Error al obtener las respuestas"
               }

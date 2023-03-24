@@ -21,7 +21,7 @@
                 {
 
                   "state": true,
-                  "mensaje": "Estudiante creado correctamente"
+                  "message": "Estudiante creado correctamente"
 
                 }
         '400':
@@ -36,5 +36,5 @@
               example:
                 {
                   "state": false,
-                  "mensaje": "Fallo en la creación del estudiante"
+                  "message": "Fallo en la creación del estudiante"
                 }

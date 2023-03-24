@@ -38,5 +38,5 @@
             example:
               {
                 "state": false,
-                "mensaje": "No se pudo obtener el usuario"
+                "message": "No se pudo obtener el usuario"
               }

@@ -23,7 +23,7 @@
             example:
               {
                 "state": true,
-                "message": "Pregunta eliminada correctamente"
+                "message": "Pregunta Eliminada con exito"
               }
       400:
         description: Petición fallida

@@ -39,5 +39,5 @@
             example:
               {
                 "state": false,
-                "mensaje": "No se pudo obtener las preguntas"
+                "message": "Error al listar las preguntas"
               }

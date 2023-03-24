@@ -71,19 +71,19 @@ components:
         - documentNumber
         - email
         - phone
-        - role
+        - rol
         - password
         - state
       example:
-        firstName: David
-        secondName: Alejandro
-        surname: Sepulveda
-        secondSurName: Amaya
+        firstName: Pepitp
+        secondName: pepe
+        surname: Perez
+        secondSurName: Perez
         typeDocument: 1
-        documentNumber: 1037660985
-        email: da_alejandro@gmail.com
+        documentNumber: 123000001
+        email: pepito@gmail.com
         phone: 32123122314
-        role: 1
+        rol: 1
         password: passAdmin
         state: true
     login:
@@ -99,7 +99,7 @@ components:
         - email
         - password
       example:
-        email: da_alejandro@gmail.com
+        email: pepito@gmail.com
         password: passAdmin
     userUpdate:
       type: object

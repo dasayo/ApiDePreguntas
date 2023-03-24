@@ -13,7 +13,7 @@ components:
     question:
       type: object
       properties:
-        name:
+        question:
           type: string
           description: Nombre de la pregunta
         options:
@@ -21,23 +21,23 @@ components:
           items:
             $ref: '#/components/schemas/option'
       required:
-        - name
-        - option
+        - question
+        - options
       example:
-        name: Pregunta 1
+        question: Pregunta 1
         options:
-          - name: Opcion 1
-            state: true
-          - name: Opcion 2
-            state: false
-          - name: Opcion 3
-            state: false
-          - name: Opcion 4
-            state: false
+          - opcion: Opcion 1
+            iscorrect: true
+          - opcion: Opcion 2
+            iscorrect: false
+          - opcion: Opcion 3
+            iscorrect: false
+          - opcion: Opcion 4
+            iscorrect: false
     option:
       type: object
       properties:
-        name:
+        opcion:
           type: string
           description: Nombre de la opcion
         state:

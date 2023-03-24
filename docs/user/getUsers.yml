@@ -22,24 +22,42 @@
                 "message": "Listado de estudiantes",
                 "users": [
                   {
-                    "firstName": "David",
-                    "secondName": "Alejandro",
-                    "surname": "Sepulveda",
-                    "secondSurName": "Amaya",
+                    "firstName": "pepito",
+                    "secondName": "Pepe",
+                    "surname": "Perez",
+                    "secondSurName": "Perez",
                     "typeDocument": 1,
-                    "documentNumber": "1037660985",
-                    "email": "da_alejandro@gmail.com",
+                    "documentNumber": "1123000001",
+                    "email": "pepe@gmail.com",
                     "phone": "32123122314"
                   },
                   {
-                    "firstName": "Stephania",
+                    "firstName": "Juanita",
                     "secondName": "",
-                    "surname": "Carrero",
-                    "secondSurName": "Vargas",
+                    "surname": "Perez",
+                    "secondSurName": "Perez",
                     "typeDocument": 1,
-                    "documentNumber": "1004810062",
-                    "email": "scarrero@gmail.com",
+                    "documentNumber": "11012000161",
+                    "email": "JuanitaP@gmail.com",
                     "phone": "32123122314"
                   }
                 ]
+              }
+      400:
+        description: Petición fallida
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                state:
+                  type: boolean
+                  description: Estado de la petición
+                message:
+                  type: string
+                  description: Mensaje de error
+            example:
+              {
+                "state": false,
+                "message": "Fallo en el listado de estudiantes"
               }

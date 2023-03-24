@@ -22,6 +22,21 @@
                 "id": 8,
                 "name": "David Alejandro Sepulveda Amaya",
                 "role": "admin",
-                "mensaje": "Ingreso exitoso",
+                "message": "Ingreso exitoso",
                 "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhX2FsZWphbmRyb0BnbWFpbC5jb20iLCJpZCI6OCwiaWF0IjoxNjc5Mzc2NDgyLCJleHAiOjE2NzkzNzgyODJ9.bT_QYGsfRKQNRBv-QT-F6MLU5kdwFbz67ygTng67PSU"
               }
+      '400':
+        description: Petición fallida
+        content:
+          application/json:
+            schema:
+              state:
+                type: boolean
+              message:
+                type: string
+            example:
+              {
+                "state": false,
+                "message": "constraseña o email invalido "
+              }
+

@@ -28,7 +28,7 @@
             example:
               {
                 "state": true,
-                "mensaje": "Usuario actualizado correctamente"
+                "message": "Se actualizo correctamente"
               }
       400:
         description: Petición fallida
@@ -37,5 +37,5 @@
             example:
               {
                 "state": false,
-                "mensaje": "No se pudo actualizar el usuario"
+                "message": "Error al actualizar"
               }

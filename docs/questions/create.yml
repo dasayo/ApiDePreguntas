@@ -20,7 +20,7 @@
             example:
               {
                 "state": true,
-                "message": "Pregunta creada correctamente"
+                "message": "Pregunta creada exitosamente"
               }
       '400':
         description: Error en la petición
@@ -34,5 +34,5 @@
             example:
               {
                 "state": false,
-                "mensaje": "Fallo en la creación de la pregunta"
+                "message": "Error al crear la pregunta"
               }
