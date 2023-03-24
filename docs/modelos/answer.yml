@@ -22,15 +22,15 @@ components:
     answerUpdate:
       type: object
       properties:
-        answer:
+        opcion:
           type: number
           description: contenido de la respuesta
-        is_correct:
+        iscorrect:
           type: boolean
           description: valor de la respuesta correcta o incorrecta
       required:
-        - answer
-        - is_correct
+        - opcion
+        - iscorrect
       example:
         answer: Domingo
-        is_correct: true
+        iscorrect: true

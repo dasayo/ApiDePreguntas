@@ -76,5 +76,5 @@
             example:
               {
                 state: false ,
-                error: 'Error al obtener el listado'
+                message: 'Error al obtener el listado'
               }

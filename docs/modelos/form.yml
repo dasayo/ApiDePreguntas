@@ -32,7 +32,4 @@ components:
         - answers
       example:
         estudianteId: 1
-        answers:
-          - 1
-          - 2
-          - 3
+        answers:  [1,5,9,13]
