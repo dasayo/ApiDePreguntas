@@ -17,7 +17,7 @@ Antes de comenzar, asegúrate de tener instalado Node.js y PostgreSQL en tu equi
 1. Clona el repositorio en tu equipo.
 
    ```sh
-   git clone <repositorio>
+   git clone https://github.com/dasayo/ApiDePreguntas.git
 2. Accede al directorio del proyecto y ejecuta:
 
     ```sh
