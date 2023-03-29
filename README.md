@@ -38,7 +38,7 @@ para instalar todas las dependencias necesarias.
 La aplicación estará disponible en http://localhost:4001.
 
 # Uso
-Para obtener más detalles sobre cómo utilizar esta API, consulte la documentación incluida en el proyecto, que se puede encontrar en http://localhost:3333/docs.
+Para obtener más detalles sobre cómo utilizar esta API, consulte la documentación incluida en el proyecto, que se puede encontrar en http://localhost:4001/docs.
 
 
 
