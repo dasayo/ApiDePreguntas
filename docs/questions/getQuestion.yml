@@ -1,4 +1,4 @@
-/api/v1/questions/getQuestion:
+/api/v1/questions/getQuestions:
   get:
     tags:
       - Questions
