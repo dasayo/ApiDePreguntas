@@ -2,7 +2,7 @@
 
 # Sistema de calificaciones
 
-Este proyecto es una API que permite responder formularios de selección múltiple y guardarlos en la base de datos.
+Este proyecto es una API que permite responder formularios de selección múltiple y guardarlos en la base de datos. Puedes usar esta Api desde el siguiente enlace https://incompetent-cough-production.up.railway.app/docs/index.html aca podras encontrar como usarla.
 
 ## Descripción
 
