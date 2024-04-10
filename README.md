@@ -16,25 +16,26 @@ Antes de comenzar, asegúrate de tener instalado Node.js y PostgreSQL en tu equi
 
 1. Clona el repositorio en tu equipo.
 
-   ```sh
+   ~~~
    git clone https://github.com/dasayo/ApiDePreguntas.git
+   ~~~
 2. Accede al directorio del proyecto y ejecuta:
 
-    ```sh
+    ~~~
     npm i
-
+    ~~~
 para instalar todas las dependencias necesarias.
 
 3. Configura la conexión a la base de datos modificando el archivo .env con tus credenciales de PostgreSQL.
 
 4. Ejecuta las migraciones de la base de datos para crear las tablas necesarias.
-    ```sh
+    ~~~
     node ace migration:run
-
+    ~~~
 5. Inicia el servidor de desarrollo con el comando:
-    ```sh
+    ~~~
     npm run dev
-
+    ~~~
 La aplicación estará disponible en http://localhost:4001.
 
 # Uso
